@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BHU Together</title>
+  <link rel="stylesheet" href="src/output.css">
+  <style>
+    .actions div {
+      cursor: pointer;
+    }
+    .circle div {
+      position: relative;
+      top: 50%;
+      left: 40%;
+    }
+  </style>
+</head>
+<body class="bg-[url(/assets/main_background.png)] h-screen bg-center bg-no-repeat">
+  <header class="pt-10 text-white">
+    <nav class="flex justify-around">
+      <section class="logo cursor-pointer">LOGO</section>
+      <section class="actions flex justify-evenly w-[50%] ml-52 text-xl items-center font-bold">
+        <div>Home</div>
+        <div>Find a match</div>
+        <div>Communities</div>
+        <div>Contact Us</div>
+        <div>About Us</div>
+      </section>
+      <section class="user">
+        <img class="w-8 cursor-pointer invert" src="assets/user.png" alt="user_profile">
+      </section>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="intro mt-40 w-[50%] ml-32 text-white font-semibold">
+      <p class="text-3xl leading-relaxed"><span class="text-red-600 text-6xl">Explore </span> love at BHU's premier dating platform, where cultural richness meets modern connections. Unleash meaningful conversations and forge bonds amidst the vibrant tapestry of Varanasi. Join us to discover companionship rooted in tradition, amplified by technology. Elevate your dating experience at BHU, where hearts converge in harmony.</p>
+      <button class="mt-10 bg-[#D50033] px-10 py-3 ml-20 rounded-full">SIGN UP</button>
+    </section>
 
+    <section class="my-[30%] flex justify-center">
+      <section class="circle w-[60rem] h-[60rem] rounded-full bg-slate-400 grid grid-rows-2 grid-cols-2 absolute">
+        <div>Match</div>
+        <div>Community</div>
+        <div>Travelling Partner</div>
+        <div>Study Partner</div>
+      </section>
+    </section>
+  </main>
+
+</body>
+</html>
