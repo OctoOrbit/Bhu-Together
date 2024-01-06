@@ -9,10 +9,8 @@
     .actions div {
       cursor: pointer;
     }
-    .circle div {
-      position: relative;
-      top: 50%;
-      left: 40%;
+    .mini-circle div {
+      cursor: pointer;
     }
   </style>
 </head>
@@ -39,12 +37,14 @@
       <button class="mt-10 bg-[#D50033] px-10 py-3 ml-20 rounded-full">SIGN UP</button>
     </section>
 
-    <section class="my-[30%] flex justify-center text-white text-3xl ">
-      <section class="circle w-[60rem] h-[60rem] rounded-full bg-slate-400 grid grid-rows-2 grid-cols-2 absolute">
-        <div>Match</div>
-        <div>Community</div>
-        <div>Travelling Partner</div>
-        <div>Study Partner</div>
+    <section class="my-[30%] flex justify-center text-white font-bold text-3xl">
+      <section class="circle w-[60rem] h-[60rem] rounded-full bg-slate-400 flex justify-center items-center">
+        <section class="mini-circle w-[40rem] h-[40rem] rounded-full grid grid-rows-2 grid-cols-2 items-center text-center">
+          <div>Match</div>
+          <div>Community</div>
+          <div>Travelling Partner</div>
+          <div>Study Partner</div>
+        </section>
       </section>
     </section>
   </main>
