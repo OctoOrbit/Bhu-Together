@@ -6,13 +6,11 @@
   <title>BHU Together</title>
   <link rel="stylesheet" href="src/output.css">
   <style>
-    .actions div {
+    .actions a {
       cursor: pointer;
     }
-    .circle div {
-      position: relative;
-      top: 50%;
-      left: 40%;
+    .mini-circle div {
+      cursor: pointer;
     }
   </style>
 </head>
@@ -21,11 +19,11 @@
     <nav class="flex justify-around">
       <section class="logo cursor-pointer">LOGO</section>
       <section class="actions flex justify-evenly w-[50%] ml-52 text-xl items-center font-bold">
-        <div>Home</div>
-        <div>Find a match</div>
-        <div>Communities</div>
-        <div>Contact Us</div>
-        <div>About Us</div>
+        <a href="index.html">Home</a>
+        <a>Find a match</a>
+        <a href="communities/communities.html">Communities</a>
+        <a href="contact/contact.html">Contact Us</a>
+        <a href="aboutus/aboutus.html">About Us</a>
       </section>
       <section class="user">
         <img class="w-8 cursor-pointer invert" src="assets/user.png" alt="user_profile">
@@ -36,17 +34,37 @@
   <main>
     <section class="intro mt-40 w-[50%] ml-32 text-white font-semibold">
       <p class="text-3xl leading-relaxed"><span class="text-red-600 text-6xl">Explore </span> love at BHU's premier dating platform, where cultural richness meets modern connections. Unleash meaningful conversations and forge bonds amidst the vibrant tapestry of Varanasi. Join us to discover companionship rooted in tradition, amplified by technology. Elevate your dating experience at BHU, where hearts converge in harmony.</p>
-      <button class="mt-10 bg-[#D50033] px-10 py-3 ml-20 rounded-full">SIGN UP</button>
+      <button class="mt-10 bg-[#D50033] px-10 py-3 ml-20 rounded-full"><a href="login/login.html">SIGN UP</a></button>
     </section>
 
-    <section class="my-[30%] flex justify-center">
-      <section class="circle w-[60rem] h-[60rem] rounded-full bg-slate-400 grid grid-rows-2 grid-cols-2 absolute">
-        <div>Match</div>
-        <div>Community</div>
-        <div>Travelling Partner</div>
-        <div>Study Partner</div>
+    <section class="mt-[30%] flex justify-center text-white font-bold text-3xl">
+      <section class="circle w-[60rem] h-[60rem] rounded-full bg-slate-400 flex justify-center items-center">
+        <section class="mini-circle w-[40rem] h-[40rem] rounded-full grid grid-rows-2 grid-cols-2 items-center text-center">
+          <div>Match</div>
+          <div>Community</div>
+          <div>Travelling Partner</div>
+          <div>Study Partner</div>
+        </section>
       </section>
     </section>
+
+    <section class="m-20 w-[50%] mx-auto bg-gray-400 rounded-3xl">
+      <div class="container flex flex-col items-center py-10">
+        <h1 class="text-red-900 text-3xl mb-10">TESTIMONIALS</h1>
+        <div class="content flex justify-around">
+          <p class="w-[60%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque autem necessitatibus similique consectetur, dolorum odio repudiandae iure enim praesentium, quisquam quia esse quis molestias accusantium recusandae, labore eos. Vel!</p>
+          <img src="assets/user.png" alt="kamla" class="w-32">
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black h-96 text-white pt-4 text-center">
+      <h1 class="text-center">FOOTER</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, facere!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, facere!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, facere!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, facere!</p>
+    </footer>
   </main>
 
 </body>
