@@ -1,1 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GitHub Profile</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body class="font-sans">
+        <div>
+            <nav class="bg-gray-800">
+                <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                    <div class="relative flex h-16 items-center justify-between">
+                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                            <!-- Mobile menu button-->
+                            <button type="button"
+                                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                aria-controls="mobile-menu" aria-expanded="false">
+                                <span class="absolute -inset-0.5"></span>
+                                <span class="sr-only">Open main menu</span>
+                                <!--
+                            Icon when menu is closed.
+                
+                            Menu open: "hidden", Menu closed: "block"
+                          -->
+                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <!--
+                            Icon when menu is open.
+                
+                            Menu open: "block", Menu closed: "hidden"
+                          -->
+                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                            <div class="flex flex-shrink-0 items-center text-white">
+                                Logo Here
+                            </div>
+                            <div class="hidden sm:ml-6 sm:block">
+                                <div class="flex space-x-4">
+                                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                    <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                        aria-current="page">Add Option</a>
+                                    <a href="#"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Add
+                                        Option</a>
+                                    <a href="#"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Add
+                                        Option</a>
+                                    <a href="#"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Add
+                                        Option</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                            <button type="button"
+                                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">View notifications</span>
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                                </svg>
+                            </button>
+
+                            <!-- Profile dropdown -->
+                            <div class="relative ml-3 ">
+                                <div>
+                                    <button type="button"
+                                        class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                        id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                        <span class="absolute -inset-1.5"></span>
+                                        <span class="sr-only">Open user menu</span>
+                                        <img class="h-8 w-8 rounded-full"
+                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                            alt="">
+                                    </button>
+                                </div>
+
+                                <!--
+                            Dropdown menu, show/hide based on menu state.
+                
+                            Entering: "transition ease-out duration-100"
+                              From: "transform opacity-0 scale-95"
+                              To: "transform opacity-100 scale-100"
+                            Leaving: "transition ease-in duration-75"
+                              From: "transform opacity-100 scale-100"
+                              To: "transform opacity-0 scale-95"
+                          -->
+                                <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+                                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                    tabindex="-1" id="dropdown-menu">
+                                    <!-- Active: "bg-gray-100", Not Active: "" -->
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-1">Settings</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-2">Sign out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu, show/hide based on menu state. -->
+                <div class="sm:hidden" id="mobile-menu">
+                    <div class="space-y-1 px-2 pb-3 pt-2">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                            aria-current="page">Dashboard</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex my-8">
+                <div class="container mx-auto px-8">
+                    <div class="flex px-10 ">
+                        <div class="w-1/4 ">
+                            <div class="mb-4 ">
+                                <img class="rounded-full"
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                            </div>
+                            <div class="mb-4 ">
+                                <div class="text-3xl font-medium text-grey-darkest">
+                                    Full Name
+                                </div>
+                                <div class="text-xl text-grey-dark font-light">@username</div>
+                                <div class="text-xl text-grey-dark font-light">Department</div>
+                                <div class="text-xl text-grey-dark font-light">Hostel Name</div>
+                            </div>
+                            <div class="pb-6 border-b">
+                                <a href="#" class="no-underline text-sm"> Add a bio </a>
+                            </div>
+                            <div class="flex items-center text-left py-4 mb-4 border-b">
+                                <div class="flex items-center mr-2">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <a href="#" class="no-underline text-sm">
+                                        Phone Number
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="font-medium text-grey-darkest">Interests</div>
+                                <div class="flex items-center mt-2">
+                                    <div class="mr-1">
+                                        <a href="https://github.com/cogitools">
+                                            <img class="w-8 h-8 rounded"
+                                                src="https://avatars1.githubusercontent.com/u/1054277?s=70&v=4" />
+                                        </a>
+                                    </div>
+                                    <div class="mr-1">
+                                        <a href="https://github.com/cogitools">
+                                            <img class="w-8 h-8 rounded"
+                                                src="https://avatars1.githubusercontent.com/u/1054277?s=70&v=4" />
+                                        </a>
+                                    </div>
+                                    <div class="mr-1">
+                                        <a href="https://github.com/cogitools">
+                                            <img class="w-8 h-8 rounded"
+                                                src="https://avatars1.githubusercontent.com/u/1054277?s=70&v=4" />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/cogitools">
+                                            <img class="w-8 h-8 rounded"
+                                                src="https://avatars1.githubusercontent.com/u/1054277?s=70&v=4" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-3/4 ml-6 mt-2">
+                            <div class="flex items-center font-thin text-grey-dark text-sm border-b">
+                                <div class="p-4 border-b-2 font-normal text-grey-darkest border-orange -mb-2px">
+                                    Overview
+                                </div>
+                                <div class="p-4 flex items-center">
+                                    <div>Communities</div>
+                                    <div class="rounded-lg bg-grey-light text-xs ml-1 p-px">
+                                        6
+                                    </div>
+                                </div>
+                                <div class="p-4 flex items-center">
+                                    <div>Followers</div>
+                                    <div class="rounded-lg bg-grey-light text-xs ml-1 p-px">
+                                        15
+                                    </div>
+                                </div>
+                                <div class="p-4 flex items-center">
+                                    <div>Following</div>
+                                    <div class="rounded-lg bg-grey-light text-xs ml-1 p-px">
+                                        23
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="activity" class="my-3">Recent Activities
+                                <div class="text-sm">Coding Frontend of Bhu connect App</div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-1/2 pt-6 pb-2 font-normal text-grey-darkest">
+                                    Your Communities
+                                </div>
+                                <div class="w-1/2 justify-end text-right text-grey-dark text-sm font-light pt-6 pb-2">
+                                    Customize your communitites
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/2 border px-4 py-4 mb-4 -mr-2 rounded text-sm">
+                                    <div class="flex">
+                                        <div class="mr-2">
+                                            <svg class="h-3 w-3 fill-current text-grey-dark" viewBox="0 0 32 32"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="no-underline"> Music </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-sm mt-6">
+                                        <div class="mr-4 font-thin text-xs">50 Members</div>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 border px-4 py-4 mb-4 ml-4 rounded text-sm">
+                                    <div class="flex">
+                                        <div class="mr-2">
+                                            <svg class="h-3 w-3 fill-current text-grey-dark" viewBox="0 0 32 32"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="no-underline">Dance </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-sm mt-6">
+                                        <div class="mr-4 font-thin text-xs">50 Members</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/2 border px-4 py-4 mb-4 -mr-2 rounded text-sm">
+                                    <div class="flex">
+                                        <div class="mr-2">
+                                            <svg class="h-3 w-3 fill-current text-grey-dark" viewBox="0 0 32 32"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="no-underline">Painting </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-sm mt-6">
+                                        <div class="mr-4 font-thin text-xs">50 Members</div>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 border px-4 py-4 mb-4 ml-4 rounded text-sm">
+                                    <div class="flex">
+                                        <div class="mr-2">
+                                            <svg class="h-3 w-3 fill-current text-grey-dark" viewBox="0 0 32 32"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="no-underline"> Social Awareness </a>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-sm mt-6">
+                                        <div class="mr-4 font-thin text-xs">50 Members</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="messages" class="mt-5">Your Messages from Contacts
+                                <div class="text-sm">There are none.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="container mx-auto px-8">
+                    <div class="px-10">
+                        <div class="flex items-center justify-between border-t py-8">
+                            <div class="justify-start justify-between text-xs w-2/5 flex">
+                                <div class="mr-4">&copy; 2017 GitHub, Inc.</div>
+                                <div class="mr-4">
+                                    <a href="#" class="no-underline"> Terms </a>
+                                </div>
+                                <div class="mr-4">
+                                    <a href="#" class="no-underline"> Privacy </a>
+                                </div>
+                                <div class="mr-4">
+                                    <a href="#" class="no-underline"> Security </a>
+                                </div>
+                                <div class="mr-4">
+                                    <a href="#" class="no-underline"> Status </a>
+                                </div>
+                                <div class="mr-4">
+                                    <a href="#" class="no-underline"> Help </a>
+                                </div>
+                            </div>
+                            <div class="justify-center w-1/5 text-center">
+                                <svg class="fill-current text-grey h-6 w-6" aria-labelledby="simpleicons-github-icon"
+                                    role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title id="simpleicons-github-icon">GitHub icon</title>
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
+                            </div>
+                            <div class="justify-end justify-between text-xs w-2/5 flex text-right">
+                                <div class="ml-4">
+                                    <a href="#" class="no-underline"> Contact GitHub </a>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="no-underline"> API </a>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="no-underline"> Training </a>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="no-underline"> Shop </a>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="no-underline"> Blog </a>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="no-underline"> About </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
